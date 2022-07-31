@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "course_work": {
+      "main": "src/course_work/main.mo",
+      "type": "motoko"
+    },
+    "course_work_assets": {
+      "dependencies": [
+        "course_work"
+      ],
+      "frontend": {
+        "entrypoint": "src/course_work_assets/src/index.html"
+      },
+      "source": [
+        "src/course_work_assets/assets",
+        "dist/course_work_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.10.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
